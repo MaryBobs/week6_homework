@@ -3,11 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const formSubmit = document.querySelector('#horse-form');
   formSubmit.addEventListener('submit', handleSubmit);
 
+  const deleteAll = document.querySelector('#delete-button');
+  deleteAll.addEventListener('click', handleDelete);
+
 })
 
   const handleSubmit = function (event) {
     event.preventDefault();
-  console.log("hello");
+
     const newHorse = createNewHorse(event.target);
     const horseList = document.querySelector("#horse-list");
     horseList.appendChild(newHorse);
@@ -33,4 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     return newHorse
 
+  }
+
+  const handleDelete = function (event) {
+    const horseList = document.querySelector('#horse-list');
+    while (horseList.firstChild) {
+      horseList.removeChild(horseList.firstChild);}
   }
