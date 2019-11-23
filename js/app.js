@@ -30,6 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
     speed.textContent = form.speed.value;
     newHorse.appendChild(speed);
 
+    const birthday = document.createElement('h2');
+    birthday.textContent = form.birthday.value;
+    newHorse.appendChild(birthday);
+
     const food = document.createElement('h2');
     food.textContent = form.food.value;
     newHorse.appendChild(food);
