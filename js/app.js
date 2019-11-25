@@ -38,6 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
     food.textContent = form.food.value;
     newHorse.appendChild(food);
 
+    const color = document.createElement('h2');
+    color.textContent = form.color.value;
+    newHorse.appendChild(color);
+
     return newHorse
 
   }

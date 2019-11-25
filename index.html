@@ -3,31 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title>Flying Horses</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
     <script src="js/app.js"></script>
   </head>
   <body>
+    <h1>New Flying Horse details:</h1>
+    <h2>(Please complete all sections)</h2>
     <form id="horse-form" action="index.html" method="post">
       <label for="name">Name:</label>
       <input type="text" placeholder="Please enter horse name" id="name" required>
       <br>
-      <label for="speed">Speed(in knots):</label>
+      <br>
+      <label for="speed">Flying Speed(in knots):</label>
       <input type="number" id="speed" max=100 required>
+      <br>
       <br>
       <label for="birthday">Birthday</label>
       <input type="date" id="birthday" required>
       <br>
+      <br>
       <label for="food">Favourite Treat:</label>
       <select id="food" required>
         <<option value="" disabled selected></option>
-        <option value="apples">Apples</option>
-        <option value="chocolate">Chocolate</option>
-        <option value="rainbows">Rainbows</option>
-        <option value="hay">Hay</option>
-        <option value="mince-pies">Mince Pies</option>
+        <option value="Apples">Apples</option>
+        <option value="Chocolate">Chocolate</option>
+        <option value="Rainbows">Rainbows</option>
+        <option value="Hay">Hay</option>
+        <option value="Mince-pies">Mince Pies</option>
       </select>
       <br>
-      <input type="submit" value="create horse" value="save">
+      <br>
+      <label for="color">Colour</label>
+      <br>
+      <input type="radio" id="color" name="color" value="Indigo" required>Indigo<br>
+      <input type="radio" id="color" name="color" value="Auburn" required>Auburn<br>
+      <input type="radio" id="color" name="color" value="Mustard" required>Mustard<br>
+      <input type="radio" id="color" name="color" value="Aqua" required>Aqua<br>
+      <input type="radio" id="color" name="color" value="Emerald" required>Emerald
+      <br>
+      <br>
+      <input type="submit" id="submit-button" value="Create horse" value="save">
     </form>
+    <br>
     <button type="click" id="delete-button">Remove all Horses from Stable</button>
     <h1>Flying Horses in stable</h1>
     <ul id="horse-list"></ul>
